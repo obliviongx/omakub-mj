@@ -9,15 +9,20 @@ yay -S --needed gir1.2-gtop-2.0 gir1.2-clutter-1.0 --noconfirm
 # Install TopHat
 gext install tophat@fflewddur.github.io
 
-sudo cp ~/.local/share/gnome-shell/extensions/tophat@fflewddur.github.io/schemas/org.gnome.shell.extensions.tophat.gschema.xml /usr/share/glib-2.0/schemas/
-sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
+# Check if schema file exists before copying
+if [ -f ~/.local/share/gnome-shell/extensions/tophat@fflewddur.github.io/schemas/org.gnome.shell.extensions.tophat.gschema.xml ]; then
+  sudo cp ~/.local/share/gnome-shell/extensions/tophat@fflewddur.github.io/schemas/org.gnome.shell.extensions.tophat.gschema.xml /usr/share/glib-2.0/schemas/
+  sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
+fi
 
-# Configure TopHat
-gsettings set org.gnome.shell.extensions.tophat show-icons false
-gsettings set org.gnome.shell.extensions.tophat show-cpu false
-gsettings set org.gnome.shell.extensions.tophat show-disk false
-gsettings set org.gnome.shell.extensions.tophat show-mem false
-gsettings set org.gnome.shell.extensions.tophat network-usage-unit bits
+# Configure TopHat (only if installed)
+if gnome-extensions list | grep -q "tophat@fflewddur.github.io"; then
+  gsettings set org.gnome.shell.extensions.tophat show-icons false
+  gsettings set org.gnome.shell.extensions.tophat show-cpu false
+  gsettings set org.gnome.shell.extensions.tophat show-disk false
+  gsettings set org.gnome.shell.extensions.tophat show-mem false
+  gsettings set org.gnome.shell.extensions.tophat network-usage-unit bits
+fi
 
 # Set TopHat metrics color to match the theme
 THEME_NAMES=("Tokyo Night" "Catppuccin" "Nord" "Everforest" "Gruvbox" "Kanagawa" "Rose Pine")
