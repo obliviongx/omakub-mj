@@ -23,17 +23,18 @@ if ! command -v yay >/dev/null 2>&1; then
 fi
 
 # Update the system and 'yay'
-echo "=> Updating system and 'yay' packages..."
-yay -Syyuu --noconfirm
-
-echo "Cloning Omakub..."
 rm -rf ~/.local/share/omakub
 git clone "${OMAKUB_REPO:-https://github.com/obliviongx/omakub-mj.git}" ~/.local/share/omakub >/dev/null
 if [[ $OMAKUB_REF != "master" ]]; then
   cd ~/.local/share/omakub
-  git fetch origin "${OMAKUB_REF:-stable}" && git checkout "${OMAKUB_REF:-stable}"
+  git fetch origin "${OMAKUB_REF:-main}" && git checkout "${OMAKUB_REF:-main}"
   cd -
 fi
+
+yay -Syyuu --noconfirm
+
+echo "Cloning Omakub..."
+
 
 echo "Installation starting..."
 source ~/.local/share/omakub/install.sh
