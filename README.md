@@ -4,9 +4,16 @@ Turn a fresh Manjaro GNOME installation into a fully-configured, beautiful, and 
 
 Watch the introduction video and read more at [omakub.org](https://omakub.org).
 
-📦 Install Alphabetical App Grid (AlphabeticalAppGrid@stuarthayhurst) v42
-cp: cannot stat '/home/oblivion/.local/share/gnome-shell/extensions/space-bar@luchrioh/schemas/org.gnome.shell.extensions.space-bar.gschema.xml': No such file or directory
+Optional dependencies for ulauncher
+    libappindicator-gtk3: tray icon
+:: Running post-transaction hooks...
+(1/4) Reloading user manager configuration...
+(2/4) Arming ConditionNeedsUpdate...
+(3/4) Updating icon theme caches...
+(4/4) Updating the desktop file MIME type cache...
+cp: cannot create regular file '/home/oblivion/.config/ulauncher/settings.json': No such file or directory
 Omakub installation failed! You can retry by running: source ~/.local/share/omakub/install.sh
+
 
 
 
