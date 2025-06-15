@@ -4,24 +4,9 @@ Turn a fresh Manjaro GNOME installation into a fully-configured, beautiful, and 
 
 Watch the introduction video and read more at [omakub.org](https://omakub.org).
 
-Unmount /tmp/grub-btrfs.ZIaM1BTF6J .. Success
-Found memtest86+ image: /boot/memtest86+/memtest.bin
-/usr/bin/grub-probe: warning: unknown device type nvme0n1.
-Found memtest86+ EFI image: /boot/memtest86+/memtest.efi
-/usr/bin/grub-probe: warning: unknown device type nvme0n1.
-done
-:: Processing package changes...
-(1/1) reinstalling nautilus-python                                                                                              [#############################################################################] 100%
-:: Running post-transaction hooks...
-(1/1) Arming ConditionNeedsUpdate...
- -> google-chrome-137.0.7151.103-1 is up to date -- skipping
- there is nothing to do
-Looking for matches…
-Looking for matches…
-Sync Explicit (1): gnome-tweaks-46.1-2
-warning: gnome-tweaks-46.1-2 is up to date -- skipping
- there is nothing to do
-sudo: apt: command not found
+📦 Install Alphabetical App Grid (AlphabeticalAppGrid@stuarthayhurst) v42
+cp: cannot stat '/home/oblivion/.local/share/gnome-shell/extensions/space-bar@luchrioh/schemas/org.gnome.shell.extensions.space-bar.gschema.xml': No such file or directory
+Omakub installation failed! You can retry by running: source ~/.local/share/omakub/install.sh
 
 
 
