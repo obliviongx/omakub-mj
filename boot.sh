@@ -28,7 +28,7 @@ yay -Syyuu --noconfirm
 
 echo "Cloning Omakub..."
 rm -rf ~/.local/share/omakub
-git clone "${OMAKUB_REPO:-https://github.com/akitaonrails/omakub.git}" ~/.local/share/omakub >/dev/null
+git clone "${OMAKUB_REPO:-https://github.com/obliviongx/omakub.git}" ~/.local/share/omakub >/dev/null
 if [[ $OMAKUB_REF != "master" ]]; then
   cd ~/.local/share/omakub
   git fetch origin "${OMAKUB_REF:-stable}" && git checkout "${OMAKUB_REF:-stable}"
