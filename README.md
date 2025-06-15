@@ -4,6 +4,27 @@ Turn a fresh Manjaro GNOME installation into a fully-configured, beautiful, and 
 
 Watch the introduction video and read more at [omakub.org](https://omakub.org).
 
+Unmount /tmp/grub-btrfs.ZIaM1BTF6J .. Success
+Found memtest86+ image: /boot/memtest86+/memtest.bin
+/usr/bin/grub-probe: warning: unknown device type nvme0n1.
+Found memtest86+ EFI image: /boot/memtest86+/memtest.efi
+/usr/bin/grub-probe: warning: unknown device type nvme0n1.
+done
+:: Processing package changes...
+(1/1) reinstalling nautilus-python                                                                                              [#############################################################################] 100%
+:: Running post-transaction hooks...
+(1/1) Arming ConditionNeedsUpdate...
+ -> google-chrome-137.0.7151.103-1 is up to date -- skipping
+ there is nothing to do
+Looking for matches…
+Looking for matches…
+Sync Explicit (1): gnome-tweaks-46.1-2
+warning: gnome-tweaks-46.1-2 is up to date -- skipping
+ there is nothing to do
+sudo: apt: command not found
+
+
+
 This is a FORK of the original [Basecamp's Omakub](https://github.com/basecamp/omakub/). The original project targets only Ubuntu. This fork is intended for Arch Linux in general - Manjaro Gnome, in particular.
 
 There is an Arch version for WSL2 on Windows, called [ArchWSL](https://github.com/yuk7/ArchWSL). There are at least 2 things to keep in mind:
